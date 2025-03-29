@@ -1,11 +1,145 @@
+@font-face {
+    font-family: "Figtree";
+    src: url("fonts/Figtree.ttf") format("truetype");
+  }
+
+
 :root{
+    /* Colors */
     --Yellow: hsl(47, 88%, 63%);
     --White: hsl(0, 0%, 100%);
     --Gray-500: hsl(0, 0%, 42%);
-    --Gray-950: hsl(0, 0%, 7%)
+    --Gray-950: hsl(0, 0%, 7%);
+
+    /* Spacing */
+    --spacing-200: 1.5rem;
+    --spacing-50: 0.25rem;
+    --spacing-100: 0.5rem;
+    --spacing-150: 0.75rem;
+
+    /* Font Size */
+    --font-size-text-preset-3: 0.875rem;
+    --font-size-text-preset-2: 1rem;
 
 }
 
 body{
+    font-family: "Figtree", sans-serif;
+
+    display: flex;
+    max-width: 90rem;
+    min-height: 60rem;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Yellow);
+}
+
+.blogCard{
+    /*Layout*/
+    display: flex;
+    max-width: 24rem;
+    padding: var(--spacing-200);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+    flex-shrink: 0;
+
+    /*Style*/
+    background-color: var(--White);
+    border-radius: 1.25rem;
+    border: 1px solid var(--Gray-950);
+    box-shadow: 8px 8px 0px 0px #000;
+}
+
+#blogImage{
+
+    display: flex;
+    align-items: center;    /* will align center within its container */
+    align-self: stretch;
+
+    border-radius: 0.625rem;
+
+}
+
+#learningTextContainer{
     
+    display: flex;
+    padding: var(--spacing-50) var(--spacing-150); /* Horizontal and vertical padding */
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-100); /* Space between items */
+    max-width: 5.125rem;
+    max-height: 1.8125rem;
+
+    
+    border-radius: 0.25rem;
+    background: var(--Yellow);
+
+}
+
+#learningText{
+
+    color: var(--Gray-950);
+
+    /* text-preset-3-bold */
+    font-size: var(--font-size-text-preset-3);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%; /* 1.3125rem */
+
+}
+
+#publishedText{
+
+    color: var(--Gray-950);
+
+    /* text-preset-3 */
+    font-size: var(--font-size-text-preset-3);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 1.3125rem */
+}
+
+#headerText{
+    align-self: stretch;
+
+    color: var(--Gray-950);
+
+    /* text-preset-1 */
+    font-size: var(--spacing-200, 1.5rem);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%; /* 2.25rem */
+
+}
+
+#descriptionText{
+    align-self: stretch;
+    max-width: 21rem;
+
+    color: var(--Gray-500);
+
+    /* text-preset-2 */
+    font-size: var(--font-size-text-preset-2);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 1.5rem */
+}
+
+.userContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-150);
+
+
+
+    color: var(--Gray-950);
+
+    /* text-preset-3-bold */
+    font-size: var(--font-size-text-preset-3);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%; /* 1.3125rem */
 }
