@@ -113,6 +113,10 @@ body{
     line-height: 150%; /* 2.25rem */
 
 }
+#headerText:hover{
+    cursor: pointer;
+    color: var(--Yellow);
+}
 
 #descriptionText{
     align-self: stretch;
